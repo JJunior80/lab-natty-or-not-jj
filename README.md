@@ -1,42 +1,73 @@
-# Natural ou Fake Natty? Como Vencer na Era das IAs Generativas
+# 🧐 Natty or Not: Segunda Guerra Mundial
 
-## 🚀 Introdução
+## 📜 Sobre o Projeto
 
-> Woooow! Look at this 👀
+Este projeto explora o uso de **IAs generativas** para criar imagens da **Segunda Guerra Mundial** e comparar com fotos reais. O objetivo é desafiar as pessoas: **Você consegue distinguir o que é real e o que foi criado por IA?**
 
-Olá pessoal, Venilton da DIO aqui! Inspirado na hype _"Natty or Not"_ do fisiculturismo, este Lab da DIO te convida a conhecer o mundo das IAs Generativas, explorando o potencial dessas tendências tecnológicas incríveis!
+---
 
-## 🎯 Bora Pro Desafio!? Você Já Venceu 💪🤓
+## 📸 Exemplo de Imagem Gerada
 
-### Objetivos
+### **Imagem IA**
 
-1. **Explorar IAs Generativas**: Utilize essas tecnologias para criar conteúdos que sejam o mais realista possível. Seja criativo! Você pode produzir imagens, textos, áudios, vídeos ou combinações de tudo isso!
-1. **Potfólio de Projetos**:
-    1. Faça o "fork" deste repositório, criando uma cópia em seu GitHub pessoal;
-    2. Edite seu README com os detalhes do seu projeto, siga nosso [Template](#template) (é só copiar, colar e preencher);
-    3. Submeta o link do seu repositório na plataforma da DIO. Pronto, você acabou de fortalecer seu portfólio de projetos nos perfis do GitHub e DIO 🚀
-1. **Efeito de Rede**: Compartilhe seus resultados nas redes sociais com a hashtag **#LabDIONattyOrNot**. Não esqueça de nos marcar: [DIO](https://www.linkedin.com/school/dio-makethechange) e [falvojr](https://www.linkedin.com/in/falvojr).
+![Imagem IA](/img/IA%2001.png)
+![Imagem IA](/img/IA%2002.png)
+
+### **Imagem Real**
+
+![Imagem Real](/img/Real%20soldados.png)
+
+_Você consegue identificar qual é qual?_
+
+---
+
+## 🚀 Como as Imagens Foram Criadas?
+
+Utilizamos a ferramenta **DALL·E** da OpenAI com os seguintes prompts:
+
+```txt
+"Soldados americanos marchando durante a Segunda Guerra Mundial, fotografia em preto e branco, aparência realista, com uniformes detalhados e cenário de guerra ao fundo."
+```
+
+🖥 Código Python (API OpenAI)
+Para fins educacionais, este é o código que geraria as imagens caso tivéssemos créditos na API da OpenAI:
+
+⚠️ Nota: Como a conta da OpenAI atingiu o limite gratuito, as imagens foram geradas diretamente no site do DALL·E.
 
 ### Template
 
 ```markdown
-# Título do Projeto Extremamente Aesthetic ;)
+# Código Python (API OpenAI)
 
-## 📒 Descrição
-Breve descrição do seu projeto
+import openai # Biblioteca da OpenAI
 
-## 🤖 Tecnologias Utilizadas
-Liste as IAs Generativas e outras ferramentas usadas
+# Defina sua chave de API da OpenAI
 
-## 🧐 Processo de Criação
-Descreva como você criou o conteúdo
+openai.api_key = "SUA_CHAVE_AQUI"
 
-## 🚀 Resultados
-Apresente os resultados do seu projeto
+# Criando uma imagem usando a nova API da OpenAI
 
-## 💭 Reflexão (Opcional)
-Comente sobre o desafio de criar algo 'natty' com IA.
+response = openai.images.generate(
+model="dall-e-2", # Você pode testar também "dall-e-3"
+prompt="Soldados marchando na Segunda Guerra Mundial, fotografia em preto e branco, realista",
+size="1024x1024",
+quality="standard",
+n=1,
+)
+
+# Pegando o link da imagem gerada
+
+image_url = response.data[0].url
+
+print(f"Imagem gerada: {image_url}")
 ```
+
+💭 Reflexão
+Com o avanço das IAs generativas, distinguir imagens falsas das reais está cada vez mais difícil. Este projeto demonstra como a tecnologia pode enganar até mesmo os olhos mais treinados!
+
+🔹 Você acha que conseguiria diferenciar essas imagens em um teste real? Deixe sua opinião nos comentários!
+
+#LabDIONattyOrNot
 
 ### Exemplos e Insigths
 
